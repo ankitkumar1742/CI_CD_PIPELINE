@@ -5,7 +5,7 @@ const FirstFeature = () => {
   return (
     <View>
       <Text>FirstFeature!</Text>
-      <Text>This is first feature of this app</Text>
+      <Text>This is the first feature of this app</Text>
     </View>
   )
 }
