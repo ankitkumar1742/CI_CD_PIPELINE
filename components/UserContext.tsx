@@ -11,6 +11,7 @@ interface User {
   firstName: string;
   lastName: string;
   id: number;
+  isLoggedIn:boolean
 }
 interface MyContextProps {
   userData: User;
@@ -23,6 +24,7 @@ function AppContextProvider(props: any) {
     id: 1,
     firstName: 'bruce',
     lastName: 'wayne',
+    isLoggedIn:true
   });
 
   return (
