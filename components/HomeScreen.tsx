@@ -9,11 +9,11 @@ const HomeScreen: React.FC = () => {
 
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      {isLoggedIn && (
+      {isLoggedIn? (
         <Text>
           {firstName && firstName} {lastName && lastName}
         </Text>
-      )}
+      ):null}
       <TouchableOpacity
         onPress={() => {
           setUserData({
