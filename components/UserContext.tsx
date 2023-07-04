@@ -17,8 +17,8 @@ interface MyContextProps {
   userData: User;
   setUserData: (data: User) => void;
 }
-
 const MyContext = createContext({} as MyContextProps);
+
 function AppContextProvider(props: any) {
   const [userData, setUserData] = useState<User>({
     id: 1,
