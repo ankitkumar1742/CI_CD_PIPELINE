@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Import your screens or components
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
+import Quiz from './Quiz';
 
 // Create a stack navigator
 const Stack = createNativeStackNavigator();
@@ -16,6 +17,7 @@ const Navigation: React.FC = () => {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Detail" component={DetailScreen} />
+        <Stack.Screen name="Quiz" component={Quiz} />
       </Stack.Navigator>
     </NavigationContainer>
   );

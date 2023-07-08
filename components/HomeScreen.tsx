@@ -2,7 +2,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useCustomContext} from './UserContext';
 
-const HomeScreen: React.FC = () => {
+const HomeScreen: React.FC = (props:any) => {
   const {userData, setUserData} = useCustomContext();
 
   const {firstName, lastName, isLoggedIn} = userData;
@@ -15,12 +15,13 @@ const HomeScreen: React.FC = () => {
         </Text>
       ):null}
       <TouchableOpacity
-        onPress={() => {
-          setUserData({
-            ...userData,
-            isLoggedIn: !isLoggedIn,
-          });
-        }}
+        onPress={() => props.navigation.navigate('Quiz')}
+        // onPress={() => {
+        //   setUserData({
+        //     ...userData,
+        //     isLoggedIn: !isLoggedIn,
+        //   });
+        // }}
         style={{
           width: '50%',
           padding: 10,
